@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_age_targets",
+  "info": {
+    "displayName": "age_target"
+  },
+  "options": {},
+  "attributes": {
+    "kids": {
+      "type": "boolean"
+    },
+    "junior": {
+      "type": "boolean"
+    },
+    "teen": {
+      "type": "boolean"
+    },
+    "adult": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}
