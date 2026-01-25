@@ -1,5 +1,5 @@
-module.exports = ({ env }) => ({
+module.exports = {
   auth: {
-    secret: env('ADMIN_JWT_SECRET'),
+    secret: 'creativo_admin_jwt_SUPER_LONG_RANDOM_SECRET_1234567890',
   },
-});
+};
