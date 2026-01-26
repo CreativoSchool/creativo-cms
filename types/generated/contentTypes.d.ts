@@ -469,6 +469,7 @@ export interface ApiProgramProgram extends Struct.CollectionTypeSchema {
       ['kids', 'junior', 'teen', 'adult', 'all']
     >;
     thumbnail: Schema.Attribute.Media<'images' | 'files'>;
+    thumbnail_url: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

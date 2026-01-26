@@ -73,6 +73,9 @@
       "type": "component",
       "component": "shared.program-gallery-item",
       "repeatable": true
+    },
+    "thumbnail_url": {
+      "type": "string"
     }
   }
 }
