@@ -19,6 +19,10 @@
       "type": "uid",
       "targetField": "program_name"
     },
+    "description": {
+      "type": "text",
+      "required": false
+    },
     "segment": {
       "type": "enumeration",
       "enum": [
@@ -27,19 +31,6 @@
         "private",
         "event"
       ]
-    },
-    "target_usia": {
-      "type": "enumeration",
-      "enum": [
-        "kids",
-        "junior",
-        "teen",
-        "adult",
-        "all"
-      ]
-    },
-    "description": {
-      "type": "blocks"
     },
     "is_active": {
       "type": "boolean"
@@ -73,9 +64,6 @@
       "type": "component",
       "component": "shared.program-gallery-item",
       "repeatable": true
-    },
-    "thumbnail_url": {
-      "type": "string"
     }
   }
 }
