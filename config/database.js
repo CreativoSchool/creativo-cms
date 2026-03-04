@@ -1,8 +1,4 @@
 export default ({ env }) => ({
-  connection: {
-    client: 'sqlite',
-    connection: {
-      filename: env('DATABASE_FILENAME') || '.tmp/data.db',
-    },
-  },
+  host: env('HOST', '0.0.0.0'),
+  port: env.int('PORT', 1337),
 });
