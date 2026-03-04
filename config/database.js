@@ -1,25 +1,19 @@
-module.exports = ({ env }) => {
-  const client = env('DATABASE_CLIENT', 'sqlite');
-
-  const connections = {
-    postgres: {
-      connection: {
-        connectionString: env('DATABASE_URL'),
-        ssl: env.bool('DATABASE_SSL', true) && {
-          rejectUnauthorized: false,
-        },
-      },
-      pool: {
-        min: 2,
-        max: 10,
-      },
-    },
-  };
-
-  return {
+module.exports = ({ env }) => ({
+  connection: {
+    client: 'postgres',
     connection: {
-      client,
-      ...connections[client],
+      host: env('PGHOST'),
+      port: env.int('PGPORT', 5432),
+      database: env('PGDATABASE'),
+      user: env('PGUSER'),
+      password: env('PGPASSWORD'),
+      ssl: {
+        rejectUnauthorized: false,
+      },
     },
-  };
-};
+    pool: {
+      min: 0,
+      max: 10,
+    },
+  },
+});
